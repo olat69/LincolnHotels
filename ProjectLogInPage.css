@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-input {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -24,7 +25,7 @@ hr {
 }
 
 button {
-  background-color: #0ac07d;
+  background-color: #09ca83;
   color: white;
   padding: 14px 20px;
   margin: 25px 0;

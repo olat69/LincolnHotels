@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link rel="stylesheet" href="ReservationPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
+      integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>Book a Room</h1>
+    <hr />
+    <div class="container">
+      <h2>Personal Information</h2>
+      <p>Name</p>
+      <input type="text" class="box" placeholder="First Name" />
+      <input type="text" class="box2" placeholder="Last Name" />
+
+      <p>Home Address</p>
+      <input class="box" placeholder="Address" type="text" />
+
+      <p>Email</p>
+      <input type="email" class="box" placeholder="example@example.com" />
+
+      <p>Phone Number</p>
+      <input type="text" placeholder="+234 000 000 0000" />
+
+      <p>Date From</p>
+      <input type="date" class="box" id="datetime" />
+      <input type="time" class="box1" id="time" />
+
+      <p>Date To</p>
+      <input type="date" class="box" id="datetime" />
+      <input type="time" id="time" />
+
+      <p>No. of Adults</p>
+      <input type="number" />
+
+      <p>No. of Children</p>
+      <input type="number" />
+      <hr />
+      <h2>Billing Information</h2>
+
+      <p>Choose a Room</p>
+      <select name="room options" id="room">
+        <option value="Standard">Standard - #12,000</option>
+        <option value="Deluxe">Deluxe - #25,000</option>
+        <option value="Presidential">Presidential - #50,000</option>
+        <option value="Penthouse">Penthouse - #150,000</option>
+      </select>
+
+      <p>No. of rooms</p>
+      <input type="number" />
+
+      <p>Payment</p>
+      <input type="checkbox" name="cash" id="card" /> Cash <br />
+      <input type="checkbox" name="debit" id="debit" /> Debit Card <br />
+      <input type="checkbox" name="credit" id="credit" /> Credit Card
+
+      <p>Pay with Card</p>
+      <input type="text" placeholder="card number" id="cardno" />
+      <input type="text" placeholder="month/year" id="month" />
+      <input type="text" placeholder="ccc" id="ccc" />
+      <input type="text" placeholder="bank name" id="bank" />
+
+      <p><em>*Your card will be charged accordingly.</em></p>
+
+      <div></div>
+    </div>
+
+    <button id="booking" onclick="myfunction()">
+      <p>
+        <a
+          href="ReservationPage.html"
+          style="color: white; text-decoration: none"
+          >Book Now</a
+        >
+      </p>
+    </button>
+  </body>
+  <script src="ReservationPage.js"></script>
+</html>

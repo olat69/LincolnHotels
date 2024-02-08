@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="ProjectSignUpPage.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
+    integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+    <h1><strong>Lincoln Hotels</strong></h1>
+<form signUp="sign_up.php" 
+style="border: 1px solid #ccc;">
+<div class="container">
+    <h4>Sign Up</h4>
+    <p>Please fill in this form to create your account.</p>
+    <hr>
+    <label for="email"><p><b>Email</b></p></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><p><b>Password</b></p></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="re-enter"><p><b>Repeat Password</b></p></label>
+    <input type="password" placeholder="Repeat Paswword" name="re-enter" required>
+
+    <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px;">Remember me</label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color: dodgerblue;">Terms and Conditions.</a></p>
+    <div class="clearfix"> <button type="button" class="cancelbtn"><p><a href="ProjectLandingPage.html" style="color: white;">Cancel</a></p></button>
+        <button type="submit" class="signupbtn" ><p><a href="ProjectLoginPage.html" style="color: white;">Sign Up</a></p></button>
+         </div>
+</div></form>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.sidepanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(26, 25, 25);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  opacity: 0.7;
+}
+
+.openbtn:hover {
+  background-color: #313131;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+.mainpage {
+  text-align: left;
+  margin-top: 100px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.footer {
+  border: none;
+  height: 300px;
+  width: 100%;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #111;
+  opacity: 0.8;
+}
+
+#logo {
+  background-image: url(Images/logo.png);
+  background-size: 100% 25%;
+  background-repeat: no-repeat;
+}
+
+.items {
+  width: 20%;
+  height: 80%;
+  border: none;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  padding-top: 35px;
+  color: white;
+}
+
+#reviews {
+  width: 40%;
+  text-align: left;
+}
+.gallery {
+  padding-left: 40px;
+}
+
+.gallery img {
+  transition: transform 0.2s;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  width: 25%;
+  padding-left: 25%;
+}
+
+h1 {
+  font-size: 70px;
+  margin-bottom: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+.reserve,
+.chaff,
+.cancel {
+  color: white;
+  padding: 20px 14px;
+  margin: 10px 0;
+  border: 5px solid rgb(26, 25, 25);
+  cursor: pointer;
+  width: 75%;
+  height: 500px;
+}
+
+.fix {
+  padding-top: 75px;
+  text-align: center;
+}
+
+.reserve {
+  background-image: url(Images/room2.png);
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+}
+
+.chaff {
+  background-image: url(Images/chaff1.jpeg);
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+}
+
+.cancel {
+  background-image: url(Images/mem1.jpg);
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+}
+
+.reserve:hover,
+.chaff:hover,
+.cancel:hover {
+  background-color: #313131;
+}

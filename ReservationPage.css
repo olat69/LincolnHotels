@@ -1,0 +1,63 @@
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+input,
+select {
+  margin-bottom: 15px;
+  border-color: rgb(107, 106, 106);
+  border: 3px solid;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  font-size: large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+select:hover,
+input:hover {
+  border-color: rgb(169, 169, 243);
+}
+
+.container {
+  padding: 0px 20px 0px 20px;
+}
+
+.box {
+  width: 45%;
+}
+
+#booking {
+  background-color: #0ac07d;
+  color: white;
+  text-align: center;
+  width: 50%;
+  padding: 20px 100px 20px 100px;
+  margin-top: 25px;
+  margin-left: 25%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 70px;
+  margin-bottom: 25px;
+}
+
+select {
+  width: 25%;
+  height: 50px;
+}
+
+h5 {
+  margin-top: 2px;
+}
+
+#cardno,
+#bank {
+  width: 25%;
+}
+
+.box2 {
+  width: 50%;
+}

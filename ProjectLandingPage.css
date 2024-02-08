@@ -1,0 +1,66 @@
+h1 {
+  font: 5em sans-serif;
+  font-family: "Courier New";
+}
+
+body {
+  text-align: center;
+  animation: animate 25s ease-in-out infinite;
+  padding-top: 200px;
+  height: 100px;
+  background-size: cover;
+  justify-content: center;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(Images/pexels-aleksandar-pasaric-4201659.jpg);
+  }
+
+  25% {
+    background-image: url(Images/image22.jpg);
+  }
+  50% {
+    background-image: url(Images/imggg.jpeg);
+  }
+  75% {
+    background-image: url(Images/pexels-roberto-nickson-2478248.jpg);
+  }
+}
+
+a {
+  color: white;
+}
+
+p {
+  margin-top: 40px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+button {
+  background-color: black;
+  border: 0px;
+  cursor: pointer;
+  opacity: 0.9;
+  width: 20%;
+  height: 50px;
+  padding-top: 7px;
+  margin-top: 25px;
+}
+
+.content {
+  text-align: center;
+}
+
+.signUp {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.logIn {
+  border: 2px solid white;
+  border-radius: 15px;
+}

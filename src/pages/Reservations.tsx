@@ -483,7 +483,7 @@ const Reservations: React.FC = () => {
   };
 
   return (
-    <Box sx={{ pt: 8 }}>
+    <Box sx={{ pt: { xs: 7, sm: 8 } }}>
       {/* Hero Section */}
       <Box
         sx={{
@@ -529,7 +529,18 @@ const Reservations: React.FC = () => {
       <Box sx={{ py: 8, bgcolor: "background.paper" }}>
         <Container maxWidth="lg">
           <Paper elevation={3} sx={{ p: 4 }}>
-            <Stepper activeStep={activeStep} sx={{ mb: 4 }}>
+            <Stepper
+              activeStep={activeStep}
+              sx={{
+                mb: 4,
+                "& .MuiStepLabel-label": {
+                  display: { xs: "none", sm: "block" },
+                },
+                "& .MuiStepIcon-root": {
+                  fontSize: { xs: "1.5rem", sm: "2rem" },
+                },
+              }}
+            >
               {steps.map((label) => (
                 <Step key={label}>
                   <StepLabel>{label}</StepLabel>

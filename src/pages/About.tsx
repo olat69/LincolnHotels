@@ -105,12 +105,12 @@ const About: React.FC = () => {
   ];
 
   return (
-    <Box sx={{ pt: 8 }}>
+    <Box sx={{ pt: { xs: 7, sm: 8 } }}>
       {/* Hero Section */}
       <Box
         ref={heroRef}
         sx={{
-          py: 10,
+          py: { xs: 8, md: 10 },
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
           color: "white",
           position: "relative",
@@ -129,7 +129,7 @@ const About: React.FC = () => {
               sx={{
                 fontWeight: 700,
                 mb: 3,
-                fontSize: { xs: "3rem", md: "4rem" },
+                fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
                 textAlign: "center",
               }}
             >
@@ -149,6 +149,8 @@ const About: React.FC = () => {
                 mx: "auto",
                 lineHeight: 1.6,
                 opacity: 0.9,
+                fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.5rem" },
+                px: { xs: 2, md: 0 },
               }}
             >
               For over two decades, Lincoln Hotels has been synonymous with

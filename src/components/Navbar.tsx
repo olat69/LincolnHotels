@@ -60,55 +60,133 @@ const Navbar: React.FC<NavbarProps> = () => {
   };
 
   const drawer = (
-    <Box sx={{ width: 250, height: "100%", bgcolor: "primary.main" }}>
-      <Box sx={{ display: "flex", justifyContent: "flex-end", p: 2 }}>
-        <IconButton onClick={handleDrawerToggle} sx={{ color: "white" }}>
-          <CloseIcon />
-        </IconButton>
-      </Box>
-      <List>
-        {navItems.map((item) => (
-          <ListItem
-            key={item.name}
-            component={Link}
-            to={item.path}
-            onClick={handleDrawerToggle}
-            sx={{
-              color: "white",
-              textDecoration: "none",
-              "&:hover": {
-                bgcolor: "secondary.main",
-                color: "primary.main",
-              },
-            }}
-          >
-            <ListItemText
-              primary={item.name}
-              sx={{
-                "& .MuiTypography-root": {
-                  fontWeight: location.pathname === item.path ? 600 : 400,
-                },
-              }}
-            />
-          </ListItem>
-        ))}
-        <ListItem
-          component={Link}
-          to="/login"
+    <Box
+      sx={{
+        width: { xs: "100vw", sm: 300 },
+        height: "100vh",
+        bgcolor: "primary.main",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+      }}
+    >
+      {/* Header with Logo and Close Button */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          p: 3,
+          borderBottom: "1px solid rgba(255,255,255,0.1)",
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 700,
+            color: "secondary.main",
+            fontFamily: '"Playfair Display", serif',
+          }}
+        >
+          Lincoln Hotels
+        </Typography>
+        <IconButton
           onClick={handleDrawerToggle}
           sx={{
             color: "white",
-            textDecoration: "none",
-            mt: 2,
             "&:hover": {
-              bgcolor: "secondary.main",
-              color: "primary.main",
+              bgcolor: "rgba(255,255,255,0.1)",
             },
           }}
         >
-          <ListItemText primary="Login" />
-        </ListItem>
+          <CloseIcon />
+        </IconButton>
+      </Box>
+
+      {/* Navigation Items */}
+      <List sx={{ flex: 1, pt: 2, overflow: "auto" }}>
+        {navItems.map((item, index) => (
+          <motion.div
+            key={item.name}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            <ListItem
+              component={Link}
+              to={item.path}
+              onClick={handleDrawerToggle}
+              sx={{
+                color: "white",
+                textDecoration: "none",
+                py: 2,
+                px: 3,
+                mx: 2,
+                my: 0.5,
+                borderRadius: 2,
+                transition: "all 0.3s ease",
+                bgcolor:
+                  location.pathname === item.path
+                    ? "secondary.main"
+                    : "transparent",
+                "&:hover": {
+                  bgcolor:
+                    location.pathname === item.path
+                      ? "secondary.main"
+                      : "rgba(255,255,255,0.1)",
+                  transform: "translateX(8px)",
+                },
+              }}
+            >
+              <ListItemText
+                primary={item.name}
+                sx={{
+                  "& .MuiTypography-root": {
+                    fontWeight: location.pathname === item.path ? 600 : 400,
+                    fontSize: "1.1rem",
+                    color:
+                      location.pathname === item.path
+                        ? "primary.main"
+                        : "white",
+                  },
+                }}
+              />
+            </ListItem>
+          </motion.div>
+        ))}
       </List>
+
+      {/* Login Button at Bottom */}
+      <Box sx={{ p: 3, borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
+        >
+          <Button
+            component={Link}
+            to="/login"
+            onClick={handleDrawerToggle}
+            variant="outlined"
+            fullWidth
+            sx={{
+              color: "secondary.main",
+              borderColor: "secondary.main",
+              py: 1.5,
+              fontSize: "1.1rem",
+              fontWeight: 600,
+              "&:hover": {
+                bgcolor: "secondary.main",
+                color: "primary.main",
+                transform: "translateY(-2px)",
+                boxShadow: "0 4px 12px rgba(201, 176, 55, 0.3)",
+              },
+            }}
+          >
+            Login
+          </Button>
+        </motion.div>
+      </Box>
     </Box>
   );
 
@@ -221,6 +299,14 @@ const Navbar: React.FC<NavbarProps> = () => {
         onClose={handleDrawerToggle}
         ModalProps={{
           keepMounted: true,
+        }}
+        sx={{
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: { xs: "100vw", sm: 300 },
+            height: "100vh",
+            backdropFilter: "blur(10px)",
+          },
         }}
       >
         <AnimatePresence>

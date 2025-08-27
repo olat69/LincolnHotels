@@ -84,7 +84,8 @@ const Login: React.FC = () => {
         display: "flex",
         alignItems: "center",
         background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
-        py: 4,
+        py: { xs: 8, sm: 4 },
+        pt: { xs: 10, sm: 4 },
       }}
     >
       <Container maxWidth="sm">

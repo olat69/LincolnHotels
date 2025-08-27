@@ -166,7 +166,7 @@ const Chauffeur: React.FC = () => {
   };
 
   return (
-    <Box sx={{ pt: 8 }}>
+    <Box sx={{ pt: { xs: 7, sm: 8 } }}>
       {/* Hero Section */}
       <Box
         sx={{

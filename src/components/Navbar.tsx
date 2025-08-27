@@ -154,39 +154,98 @@ const Navbar: React.FC<NavbarProps> = () => {
             </ListItem>
           </motion.div>
         ))}
-      </List>
 
-      {/* Login Button at Bottom */}
-      <Box sx={{ p: 3, borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+        {/* Login and Signup buttons in mobile navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.6 }}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
         >
-          <Button
+          <ListItem
             component={Link}
             to="/login"
             onClick={handleDrawerToggle}
-            variant="outlined"
-            fullWidth
             sx={{
-              color: "secondary.main",
-              borderColor: "secondary.main",
-              py: 1.5,
-              fontSize: "1.1rem",
-              fontWeight: 600,
+              color: "white",
+              textDecoration: "none",
+              py: 2,
+              px: 3,
+              mx: 2,
+              my: 0.5,
+              borderRadius: 2,
+              transition: "all 0.3s ease",
+              bgcolor:
+                location.pathname === "/login"
+                  ? "secondary.main"
+                  : "transparent",
               "&:hover": {
-                bgcolor: "secondary.main",
-                color: "primary.main",
-                transform: "translateY(-2px)",
-                boxShadow: "0 4px 12px rgba(201, 176, 55, 0.3)",
+                bgcolor:
+                  location.pathname === "/login"
+                    ? "secondary.main"
+                    : "rgba(255,255,255,0.1)",
+                transform: "translateX(8px)",
               },
             }}
           >
-            Login
-          </Button>
+            <ListItemText
+              primary="Login"
+              sx={{
+                "& .MuiTypography-root": {
+                  fontWeight: location.pathname === "/login" ? 600 : 400,
+                  fontSize: "1.1rem",
+                  color:
+                    location.pathname === "/login" ? "primary.main" : "white",
+                },
+              }}
+            />
+          </ListItem>
         </motion.div>
-      </Box>
+
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: (navItems.length + 1) * 0.1 }}
+        >
+          <ListItem
+            component={Link}
+            to="/signup"
+            onClick={handleDrawerToggle}
+            sx={{
+              color: "white",
+              textDecoration: "none",
+              py: 2,
+              px: 3,
+              mx: 2,
+              my: 0.5,
+              borderRadius: 2,
+              transition: "all 0.3s ease",
+              bgcolor:
+                location.pathname === "/signup"
+                  ? "secondary.main"
+                  : "transparent",
+              "&:hover": {
+                bgcolor:
+                  location.pathname === "/signup"
+                    ? "secondary.main"
+                    : "rgba(255,255,255,0.1)",
+                transform: "translateX(8px)",
+              },
+            }}
+          >
+            <ListItemText
+              primary="Sign Up"
+              sx={{
+                "& .MuiTypography-root": {
+                  fontWeight: location.pathname === "/signup" ? 600 : 400,
+                  fontSize: "1.1rem",
+                  color:
+                    location.pathname === "/signup" ? "primary.main" : "white",
+                },
+              }}
+            />
+          </ListItem>
+        </motion.div>
+      </List>
     </Box>
   );
 
@@ -276,6 +335,26 @@ const Navbar: React.FC<NavbarProps> = () => {
                   }}
                 >
                   Login
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  component={Link}
+                  to="/signup"
+                  variant="contained"
+                  sx={{
+                    bgcolor: "secondary.main",
+                    color: "primary.main",
+                    ml: 1,
+                    "&:hover": {
+                      bgcolor: "secondary.dark",
+                    },
+                  }}
+                >
+                  Sign Up
                 </Button>
               </motion.div>
             </Box>
